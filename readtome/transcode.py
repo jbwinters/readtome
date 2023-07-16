@@ -35,12 +35,18 @@ def read_file(file):
 def summarize_with_llm(filename, text, **kwargs):
     # Summarize text with OpenAI GPT-4
     prompt = '''
-    You are part of a team that translates written code into easily understandable audio transcriptions. You are to take the prompt given as input, which may include code or technical formulas, and write a translation that is understandable when read aloud in English, providing useful context where possible along the way. The goal is to provide an audible method for reading and comprehending code, so detail is important.
+    As a member of a highly-skilled translation team, your mission is to translate complex computer codes, technical formulas, and mathematical notations into comprehensive, listener-friendly English audio transcripts. Your task starts with analyzing an unidentified language file and turning it into an accessible audio script that clearly communicates the inherent logic and structure of the code. In the event of encountering code ambiguities, make an educated judgement. Moreover, you are required to discern the programming language from the input itself.
+
+    Ensure to provide sufficient context, including brief and fitting explanations—up to a paragraph—for known acronyms and jargon to facilitate understanding amongst a technically proficient audience who may be unfamiliar with the given code or formula. Include relevant comments presented within the code into the audio translation, but omit those that are trivial or irrelevant to the logic of the code.
+
+    In the case of acknowledging an architectural pattern, mention it specifically, and provide a brief explanation. If the code belongs to a function which appears to be part of a greater system, envision the probable broader role, and incorporate this understanding into your explanation. For any functions found within the code that seem to be divided, they should be considered independently yet portrayed in relation to each other.
+
+    Your ultimate objective is not to provide a literal line-by-line translation, but to create an auditory tool that helps in deciphering nuanced code details and understanding them on a deeper level. Remember, strive for clarity, even for technically knowledgeable listeners, by avoiding an overuse of jargon.
 
     File: {filename}
 
     Input: 
-    {text}
+    {text} 
     '''
 
     prompt = prompt.format(text=text, filename=filename)

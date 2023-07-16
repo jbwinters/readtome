@@ -76,7 +76,6 @@ def cli(info: Info, verbose: int):
 def read(_: Info, file: str):
     """Read the given file."""
     transcode.read_aloud(file)
-    click.echo("readtome says 'hello'")
 
 
 @cli.command()
