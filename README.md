@@ -4,7 +4,7 @@
 
 Have you ever wanted to listen to your code just as you would any audiobook or podcast? Have you ever run your code through a traditional text-to-speech tool and forced yourself to listen to the chainsaw wail that emerged? I have, and my ears are still recovering. Fortunately, thanks to the magic of modern AI we can now generate coherent and listenable audio from raw code.
 
-This project offers a CLI tool that will read an arbitrary file as audio. Just run `readtome file <file>` and your code will be instantly transformed into code you can listen to on your commute, run, or while you're doing the dishes. (Okay, it's not instant, but it's close!)
+This project offers a CLI tool that will read an arbitrary file as audio. Just run `readtome file <file>` and your code will be instantly transformed into code you can listen to ~~on your commute, run, or while you're doing the dishes~~ while you're digging in the internals of unfamiliar code. (Okay, it's not instant, but it's close!)
 
 **Work in progress - contributors welcome!**
 
@@ -29,7 +29,7 @@ Install `mvp` for streaming audio: `sudo apt install mvp`.
 Run the command line tool:
 
 * `readtome --help`: Show usage information
-* `readtome <filename>`: Translate the given file into audio
+* `readtome file <filename>`: Translate the given file into audio
 
 The project's documentation contains a section to help you
 [get started](https://readtome.readthedocs.io/en/latest/getting_started.html) as a developer or
