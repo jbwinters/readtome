@@ -1,0 +1,3 @@
+name: readtome
+dependencies:
+  - python=3.8
