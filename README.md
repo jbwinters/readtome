@@ -1,15 +1,35 @@
 # readtome
 
-CLI to read code via text-to-speech
+#### A CLI to read code via intelligent text-to-speech
+
+Have you ever wanted to listen to your code just as you would any audiobook or podcast? Have you ever run your code through a traditional text-to-speech tool and forced yourself to listen to the chainsaw wail that emerged? I have, and my ears are still recovering. Fortunately, thanks to the magic of modern AI we can now generate coherent and listenable audio from raw code.
+
+This project offers a CLI tool that will read an arbitrary file as audio. Just run `readtome file <file>` and your code will be instantly transformed into code you can listen to on your commute, run, or while you're doing the dishes. (Okay, it's not instant, but it's close!)
+
+**Work in progress - contributors welcome!**
 
 ## Project Features
 
 * [readtome](http://readtome.readthedocs.io/)
-* a starter [Click](http://click.pocoo.org/5/) command-line application
+* [Click](http://click.pocoo.org/5/) command-line application
 * automated unit tests you can run with [pytest](https://docs.pytest.org/en/latest/)
 * a [Sphinx](http://www.sphinx-doc.org/en/master/) documentation project
 
 ## Getting Started
+
+To use this tool, set these local environment variables:
+
+* `OPENAI_API_KEY`
+* `ELEVENLABS_API_KEY`
+
+This will work best with a paid plan on each.
+
+Install `mvp` for streaming audio: `sudo apt install mvp`.
+
+Run the command line tool:
+
+* `readtome --help`: Show usage information
+* `readtome <filename>`: Translate the given file into audio
 
 The project's documentation contains a section to help you
 [get started](https://readtome.readthedocs.io/en/latest/getting_started.html) as a developer or
