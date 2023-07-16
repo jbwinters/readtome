@@ -22,6 +22,8 @@ import logging
 import click
 from .__init__ import __version__
 
+from . import transcode
+
 LOGGING_LEVELS = {
     0: logging.NOTSET,
     1: logging.ERROR,
@@ -70,8 +72,10 @@ def cli(info: Info, verbose: int):
 
 @cli.command()
 @pass_info
-def hello(_: Info):
-    """Say 'hello' to the nice people."""
+@click.argument("file", type=click.Path(exists=True))
+def read(_: Info, file: str):
+    """Read the given file."""
+    transcode.read_aloud(file)
     click.echo("readtome says 'hello'")
 
 
